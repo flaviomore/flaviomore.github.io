@@ -1,20 +1,45 @@
 {
-  "name": "creative",
+  "name": "fm-site",
   "title": "Flávio Moreira",
-  "version": "0.1.0",
-  "homepage": "http://whynotflavio.tk/",
+  "version": "1.0.0",
+  "homepage": "http://flavio.rocks/",
   "author": "Flavio Moreira",
   "license": "Apache-2.0",
   "repository": {
-    "type": "git",
-    "url": "https://github.com/moreflavio/moreflavio.github.io.git"
+    "url": "https://github.com/flaviorocks/flaviorocks.github.io.git",
+    "type": "git"
+  },
+  "private": false,
+  "scripts": {
+    "start": "webpack-dev-server --config webpack.dev.js --mode development",
+    "build": "webpack --config webpack.prod.js --mode production",
+    "preview": "npm run build && http-server dist"
   },
   "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-banner": "^0.6.0",
-    "grunt-browser-sync": "^2.2.0",
-    "grunt-contrib-less": "^1.2.0",
-    "grunt-contrib-uglify": "^0.11.1",
-    "grunt-contrib-watch": "^0.6.1"
+    "@babel/core": "^7.0.0-beta.46",
+    "@babel/preset-env": "^7.0.0-beta.46",
+    "autoprefixer": "^8.4.1",
+    "babel-loader": "^8.0.0-beta",
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "cssnano": "^3.10.0",
+    "favicons-webpack-plugin": "^0.0.9",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "mini-css-extract-plugin": "^0.4.0",
+    "node-sass": "^4.9.0",
+    "optimize-css-assets-webpack-plugin": "^4.0.1",
+    "path": "^0.12.7",
+    "postcss-loader": "^2.1.5",
+    "sass-loader": "^7.0.1",
+    "style-loader": "^0.21.0",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.8.1",
+    "webpack-cli": "^2.1.3",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1"
   }
 }
